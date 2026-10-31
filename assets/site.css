@@ -414,3 +414,11 @@ p { margin: 0; max-width: var(--measure); }
 .nova .label { color: var(--teal); }
 .nova h3 { font-size: 1.3rem; }
 .nova p { color: var(--text-2); font-size: 0.96rem; }
+
+/* ---------- portrait ---------- */
+.hero-side { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.portrait { margin: 0; display: grid; grid-template-columns: minmax(0, 168px) minmax(0, 1fr); gap: 18px; align-items: end; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border: 1px solid var(--line-2); box-shadow: 10px 10px 0 var(--amber-fill); background: #fff; }
+.portrait figcaption { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; font-family: var(--f-mono); font-size: 0.75rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; }
+.portrait figcaption span:first-child { font-family: var(--f-serif); font-size: 1.15rem; text-transform: none; letter-spacing: 0; color: var(--text); font-weight: 600; }
+@media (max-width: 939px) { .hero-side { flex-direction: column; } .portrait { grid-template-columns: minmax(0, 140px) minmax(0, 1fr); } }
