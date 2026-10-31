@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Issue 01 · One laptop, $6.3 billion</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Security Week in Review, Issue 01 (24–30 Oct 2026): Binance's $6.3B theft via one laptop, UNM Health's 40-minute shutdown, Cisco SD-WAN key theft, and Moldova's unauthenticated e-services.">
+<meta property="og:title" content="One laptop. $6.3 billion gone. · Security Week in Review 01">
+<meta property="og:description" content="The keys were safe. The system that asks for money wasn't. Plus the rest of the week in security, by Ijaz Mohammed.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1020'/%3E%3Crect width='32' height='3' fill='%23fbbf24'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-weight='700' font-size='15' text-anchor='middle' fill='%23e9edf6'%3EIM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../"><b aria-hidden="true"></b>Ijaz Mohammed</a>
+    <nav class="nav" aria-label="Site">
+      <a href="../#work">Work</a>
+      <a href="./" aria-current="page">Digest</a>
+      <a href="pdf/SecurityWeekInReview_Issue01_2026-10-30.pdf" target="_blank" rel="noopener">PDF</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="issue-head">
+    <div class="wrap">
+      <div class="mast-rule"><span class="label">Issue 01</span><span class="label">Weekly · free to share</span><span class="label">24 – 30 Oct 2026</span></div>
+      <div class="cover-title" style="padding-block:18px 14px"><a href="./" style="color:inherit;text-decoration:none">Security Week in Review</a></div>
+      <div class="kicker"><span class="flag">Breaking</span><span class="tag hot">Confirmed incident</span><span class="tag">Finance &amp; crypto</span><span class="tag">Logins &amp; access</span></div>
+      <h1>One laptop. <span class="hl">$6.3 billion gone.</span></h1>
+      <p class="lede">The keys were safe. The system that asks for money wasn't. This first week ran from a crypto exchange to a US hospital to a national government, and one pattern links them all. Read it in two minutes or twenty.</p>
+      <div class="actions">
+        <a class="btn primary" href="#briefing">Start reading</a>
+        <a class="btn" href="pdf/SecurityWeekInReview_Issue01_2026-10-30.pdf" target="_blank" rel="noopener">PDF edition</a>
+        <a class="btn" href="https://www.linkedin.com/in/ijaz-mohammed" target="_blank" rel="noopener">Discuss on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="article">
+      <nav class="toc" aria-label="In this issue">
+        <span class="label">In this issue</span>
+        <ol>
+          <li><a href="#briefing">30-second briefing</a></li>
+          <li><a href="#breaking">Story of the week</a></li>
+          <li><a href="#numbers">By the numbers</a></li>
+          <li><a href="#rest">The rest of the week</a></li>
+          <li><a href="#quick">Quick hits</a></li>
+          <li><a href="#new">New rules, new tools</a></li>
+          <li><a href="#playlist">Weekend playlist</a></li>
+          <li><a href="#rabbit">Rabbit holes</a></li>
+          <li><a href="#monday">Monday checklist</a></li>
+          <li><a href="#side">Pick a side</a></li>
+        </ol>
+      </nav>
+
+      <div class="prose">
+
+        <section id="briefing">
+          <span class="label">Start here</span>
+          <h2>Your 30-second briefing</h2>
+          <div class="brief">
+            <div><span class="label">Finance &amp; crypto</span><p>About $6.3B was taken from Binance after one engineer's laptop was compromised.</p></div>
+            <div><span class="label">Healthcare</span><p>UNM Health, a US trauma centre, unplugged its computers within 40 minutes of a breach.</p></div>
+            <div><span class="label">Critical infrastructure</span><p>Hackers stole encryption keys from Cisco SD-WAN gear, and Volt Typhoon hit US utilities.</p></div>
+            <div><span class="label">Public sector</span><p>Attackers pulled data on 750,000 people from Moldova's government e-services.</p></div>
+          </div>
+          <div class="take">
+            <span class="label">Ijaz's take</span>
+            <p>The pattern for me this week: attackers went after things we trust to act on our behalf. An engineer's laptop, a network controller, a package update, a government lookup service. We spend a lot proving who someone is at login, and far less asking what our own systems will do once they trust something. That's the gap I'd look at first.</p>
+          </div>
+        </section>
+
+        <section id="breaking">
+          <div class="tagrow"><span class="tag hot">Confirmed incident</span><span class="tag">Finance &amp; crypto</span><span class="tag">Logins &amp; access</span></div>
+          <h2>One laptop, $6.3 billion</h2>
+          <p class="muted"><strong>Affected:</strong> Binance (crypto exchange) and its customers · 17 hot wallets · losses covered by Binance</p>
+          <p>About $6.3B left Binance's hot wallets, the crypto kept online for quick payouts. A DevOps engineer's laptop was used to reach a service container and push withdrawals. No private-key leak was found.</p>
+          <ul class="timeline-mini">
+            <li><b>Thu</b>Unauthorised withdrawals start draining hot wallets.</li>
+            <li><b>Fri</b>Theft stops after about 4 hours. Withdrawals frozen.</li>
+            <li><b>Fri</b>About $2.7B frozen. TRM Labs blames North Korea's TraderTraitor.</li>
+            <li><b>Fri</b>Binance says it will cover losses, with withdrawals back in 45 hours.</li>
+          </ul>
+          <p>Most security money goes into protecting keys. Far less goes into who, or what, may ask for a payment, and from which device. Protecting the key is half the job. The other half is who can ask it to sign.</p>
+          <div class="split">
+            <div class="box"><span class="label">If you lead a team</span><p>Ask which systems can move money or data on their own, and whether a single laptop is enough to trigger them. Insist on a second, separate approval for large payouts.</p></div>
+            <div class="box"><span class="label">If you run the tech</span><p>No standing production access from engineer laptops: just-in-time elevation, privileged-access workstations, velocity limits and out-of-band multi-party approval on signing services.</p></div>
+            <div class="box"><span class="label">What it means here (GCC)</span><p>VARA-licensed exchanges and CBUAE-regulated payment firms run similar hot-wallet and automated-payout setups. Expect questions on who can approve a payout, and from which device.</p></div>
+            <div class="box"><span class="label">Ask your team or provider</span><p>Can one laptop trigger a payment or data export? Who approves large automated payouts, and from where? How fast would we notice?</p></div>
+          </div>
+          <p><strong>Next frontier:</strong> attackers are moving from stealing keys to abusing the automation around them: signing services, build pipelines, payment engines.</p>
+          <p class="src">Sources: Euronews · TNGlobal · CoinDesk</p>
+        </section>
+
+        <section id="numbers">
+          <span class="label">By the numbers</span>
+          <h2>The week in four figures</h2>
+          <div class="numbers">
+            <div><strong>$6.3bn</strong><span>estimated taken from Binance's hot wallets in under four hours</span><span class="src">Euronews (Binance figures)</span></div>
+            <div><strong>40 min</strong><span>from UNM Health spotting a breach to telling staff to unplug</span><span class="src">Help Net Security</span></div>
+            <div><strong>750k</strong><span>people whose ID numbers were linked to data taken from Moldova's online services</span><span class="src">The Record</span></div>
+            <div><strong>26.4k</strong><span>live passwords and access keys found in public code on Gitee</span><span class="src">MongoDB research blog</span></div>
+          </div>
+          <div class="box">
+            <span class="label">Jargon buster</span>
+            <p><strong>Hot wallet:</strong> crypto kept online for fast payouts. Convenient, but reachable.<br><strong>Management plane:</strong> the consoles that run a network. Own them, own the network.<br><strong>Supply-chain attack:</strong> poisoning software you trust, so it arrives via a normal install.</p>
+          </div>
+        </section>
+
+        <section id="rest">
+          <span class="label">The rest of the week</span>
+          <h2>Three more stories</h2>
+
+          <article class="story">
+            <div class="tagrow"><span class="tag hot">Confirmed incident</span><span class="tag">Healthcare</span><span class="tag">Logins &amp; access</span></div>
+            <h3>A hospital pulled the plug in 40 minutes</h3>
+            <p class="muted">Ambulances diverted, surgeries cancelled, claims still unverified. Affected: UNM Health (University of New Mexico Hospitals, US), patients and staff. Claimed by BYOD.</p>
+            <dl>
+              <div><dt>What</dt><dd>The state's only Level 1 trauma centre unplugged soon after a breach on 26 Oct. BYOD claims its identity tenant. UNM says core systems are safe.</dd></div>
+              <div><dt>Leaders</dt><dd>Decide who can order a shutdown, and rehearse a day on paper.</dd></div>
+              <div><dt>Tech</dt><dd>Tier identity admin roles (PIM, phishing-resistant MFA) and alert on new federation or app consent.</dd></div>
+              <div><dt>Here</dt><dd>GCC hospitals face the same call, and DoH Abu Dhabi expects tested continuity plans.</dd></div>
+            </dl>
+            <p class="src">Sources: Help Net Security · Infosecurity Magazine</p>
+          </article>
+
+          <article class="story">
+            <div class="tagrow"><span class="tag hot">Actively exploited</span><span class="tag">Critical infrastructure</span><span class="tag">Network</span></div>
+            <h3>Patched isn't the same as clean</h3>
+            <p class="muted">State-backed crews are going after the boxes that run the network. Affected: Cisco SD-WAN and ASA/FTD customers, space, defence and policy targets, US utilities and telecom.</p>
+            <dl>
+              <div><dt>What</dt><dd>Talos tied KeyDrift malware, which copies SD-WAN encryption keys, to CVE-2026-20127. Lumen exposed Volt Typhoon's relay network.</dd></div>
+              <div><dt>Leaders</dt><dd>After a critical network device is patched, ask for evidence it's clean.</dd></div>
+              <div><dt>Tech</dt><dd>Upgrade, lock management ports, hunt Talos indicators, rebuild if in doubt.</dd></div>
+              <div><dt>Here</dt><dd>Run Cisco SD-WAN or ASA in the region? Patch, then hunt. Geo-blocking won't save you.</dd></div>
+            </dl>
+            <p class="src">Source: The Hacker News (Cisco Talos, Lumen research)</p>
+          </article>
+
+          <article class="story">
+            <div class="tagrow"><span class="tag hot">Confirmed incident</span><span class="tag">Public sector</span><span class="tag">Personal data</span></div>
+            <h3>750,000 people, no login needed</h3>
+            <p class="muted">Attackers used government services that never asked who was calling. Affected: Government of Moldova, 82 e-services checked, about 750,000 citizens.</p>
+            <dl>
+              <div><dt>What</dt><dd>Over five days, attackers sent about 11 million requests through Moldova's unauthenticated online services and linked systems. 82 services were checked and the vulnerable ones taken offline.</dd></div>
+              <div><dt>Leaders</dt><dd>List every public service that returns personal data without a login, and ask who watches request volumes.</dd></div>
+              <div><dt>Tech</dt><dd>Require auth on data-returning APIs, rate-limit and alert on bulk queries, and test cross-system data paths.</dd></div>
+              <div><dt>Here</dt><dd>GCC governments run many joined-up e-services. Any lookup API that skips login deserves the same review.</dd></div>
+            </dl>
+            <p><strong>Next frontier:</strong> "convenience" APIs that skip logins are the new open front door. Expect regulators to ask for an inventory of them.</p>
+            <p class="src">Source: The Record (Recorded Future News)</p>
+          </article>
+        </section>
+
+        <section id="quick">
+          <span class="label">Quick hits</span>
+          <h2>Six things in one minute</h2>
+          <ol>
+            <li><strong>Certificates.</strong> eMudhra (emSign): eight certificate-authority keys could be worked out from public data. Browsers blocked them, but apps with built-in trust lists need rebuilding. <span class="src">The Hacker News</span></li>
+            <li><strong>Linux servers.</strong> Ubuntu and Red Hat: an old Linux TCP flaw (CVE-2026-98432) got an AI-built remote-root exploit in testing. Fixes still pending. <span class="src">The Hacker News · Cyber Kendra</span></li>
+            <li><strong>Web &amp; apps.</strong> Node.js, Envoy, Istio, Bun and .NET: a Brotli flaw (CVE-2026-111497) with public exploit code. Patch, or block compressed request bodies. <span class="src">CIS MS-ISAC</span></li>
+            <li><strong>AI tools.</strong> LiteLLM 1.107.0 shipped with credential-stealing malware after its release pipeline was hijacked. <span class="src">BleepingComputer</span></li>
+            <li><strong>Cloud tools.</strong> OVHcloud CLI: five GitHub releases were swapped for secret-stealing builds via a hijacked developer account. <span class="src">BleepingComputer</span></li>
+            <li><strong>Secrets.</strong> Gitee (China's largest code host): 26,400 live keys found, including Alibaba Cloud, OpenAI and DeepSeek. <span class="src">MongoDB research blog</span></li>
+          </ol>
+        </section>
+
+        <section id="new">
+          <span class="label">New rules, new tools</span>
+          <h2>What changed, what's worth a look</h2>
+          <div class="split">
+            <div class="box">
+              <span class="label">Framework · NIST</span>
+              <h3>NIST IR 8547: post-quantum roadmap</h3>
+              <p>A roadmap to retire encryption that quantum computers could break, with full US federal migration by 2035. Relevant to anyone using US-aligned vendors and products.</p>
+              <p><strong>Try it:</strong> list the systems that encrypt data or use certificates; ask your top five vendors for their post-quantum plan; flag data that must stay secret for 10 years (health, finance, IP).</p>
+            </div>
+            <div class="box">
+              <span class="label">Tool · public preview</span>
+              <h3>GitHub npm package firewall</h3>
+              <p>Blocks risky JavaScript packages at install time, including brand-new versions and new install scripts. Socket, Snyk and JFrog cover more languages; GitHub's is built in but npm-only. Pricing not announced.</p>
+              <p><strong>Try it:</strong> pick one team's pipeline on GitHub Enterprise Cloud, point its npm installs at the firewall, set a 3–7 day cooldown, run a week and review what got blocked.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="playlist">
+          <span class="label">Your weekend playlist</span>
+          <h2>Press play</h2>
+          <p class="muted">Four picks, about three hours in total, all cyber podcasts.</p>
+          <div class="picks">
+            <a href="https://risky.biz/RB857" target="_blank" rel="noopener"><span class="len">66<small>MIN</small></span><span><strong>Risky Business #857: AI FUD intensifies</strong><span>Patrick Gray with Alex Stamos. The week's supply-chain mess, including LiteLLM. Best for tech teams.</span></span></a>
+            <a href="https://darknetdiaries.com/episode/181" target="_blank" rel="noopener"><span class="len">80<small>MIN</small></span><span><strong>Darknet Diaries #181: Ricky</strong><span>Jack Rhysider. How a phone hacker picked targets and broke in. Gripping for everyone.</span></span></a>
+            <a href="https://risky.biz/BTN187" target="_blank" rel="noopener"><span class="len">27<small>MIN</small></span><span><strong>Between Two Nerds: Why frontier lab security will always suck</strong><span>Tom Uren and The Grugq. Security culture at AI labs. Great for leaders vetting AI vendors.</span></span></a>
+            <a href="https://risky.biz/RBNEWS625" target="_blank" rel="noopener"><span class="len">8<small>MIN</small></span><span><strong>Risky Bulletin: Brotli RCE is wrecking what's left of the internet</strong><span>A quick catch-up on the Brotli flaw. Tech.</span></span></a>
+          </div>
+        </section>
+
+        <section id="rabbit">
+          <span class="label">Rabbit holes</span>
+          <h2>What to research next</h2>
+          <div class="story">
+            <h3>Payment-request controls</h3>
+            <p>Companies guard the keys that sign payments, but rarely limit which people and systems may ask for one. This is about mapping and capping those requesters.</p>
+            <dl>
+              <div><dt>Why now</dt><dd>Binance's keys were safe. A hijacked laptop made the request.</dd></div>
+              <div><dt>Ask</dt><dd>Which of our systems will pay or export whatever a trusted service asks?</dd></div>
+              <div><dt>Try</dt><dd>Map one payment flow and mark every step a single approval can trigger.</dd></div>
+            </dl>
+          </div>
+          <div class="story">
+            <h3>Proving a network device is clean</h3>
+            <p>After a patch, confirming no attacker code is left on a firewall, VPN or SD-WAN box, using logs, file hashes and integrity checks.</p>
+            <dl>
+              <div><dt>Why now</dt><dd>Cisco warns upgrades may not remove implants.</dd></div>
+              <div><dt>Ask</dt><dd>What evidence would convince us a firewall is clean?</dd></div>
+              <div><dt>Try</dt><dd>For one firewall, list the logs and integrity checks you can collect today.</dd></div>
+            </dl>
+          </div>
+          <div class="story">
+            <h3>Package cooldowns</h3>
+            <p>Making builds wait a few days before installing brand-new versions of open-source packages, so poisoned releases are caught first.</p>
+            <dl>
+              <div><dt>Why now</dt><dd>Poisoned LiteLLM and OVHcloud releases were caught within days.</dd></div>
+              <div><dt>Ask</dt><dd>Could our builds wait 3–7 days for new versions?</dd></div>
+              <div><dt>Try</dt><dd>Run one team log-only for a week and count what a 3-day wait delays.</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section id="monday">
+          <span class="label">Monday checklist</span>
+          <h2>Five things for Monday morning</h2>
+          <ul class="checklist">
+            <li><span class="label">Leaders</span><span>Ask which systems can move money or data with a single approval.</span></li>
+            <li><span class="label">Leaders</span><span>Confirm who can order a shutdown, and when you last rehearsed it.</span></li>
+            <li><span class="label">Leaders</span><span>Ask key software suppliers how they protect their release process.</span></li>
+            <li><span class="label">Tech</span><span>Patch Brotli in Node.js, Envoy and Istio, or block compressed request bodies.</span></li>
+            <li><span class="label">Tech</span><span>After patching Cisco SD-WAN or ASA, hunt for implants and lock down management ports.</span></li>
+          </ul>
+        </section>
+
+        <section id="side">
+          <span class="label">Pick a side</span>
+          <h2>Where do you land?</h2>
+          <p>You spot a live breach mid-morning on a busy weekday, as UNM Health did. What's your first move?</p>
+          <div class="versus">
+            <div class="box"><span class="label">A</span><h3>Pull the plug fast</h3><p>Disconnect at the first sign of a breach, even if operations stop.</p></div>
+            <div class="vs">vs</div>
+            <div class="box"><span class="label">B</span><h3>Keep running, contain quietly</h3><p>Isolate what's hit and keep services going while you investigate.</p></div>
+          </div>
+          <p class="muted">And this week's question: if one laptop in your company were compromised tomorrow, what's the most it could move? Money, data or systems? Tell me on <a href="https://www.linkedin.com/in/ijaz-mohammed" target="_blank" rel="noopener">LinkedIn</a>. The best comments make next week's issue.</p>
+          <p class="src">Curated by Ijaz · Views my own, not my employer's.</p>
+        </section>
+
+        <div class="actions">
+          <a class="btn" href="./">← All issues</a>
+          <a class="btn" href="pdf/SecurityWeekInReview_Issue01_2026-10-30.pdf" target="_blank" rel="noopener">PDF edition</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><p class="small">© 2026 Ijaz Mohammed · <a href="../">Home</a> · <a href="./">Security Week in Review</a></p></div>
+</footer>
+</body>
+</html>
