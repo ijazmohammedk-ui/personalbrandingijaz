@@ -20,7 +20,7 @@ digest/pdf/                     PDF editions
 3. On the repo page choose **Add file → Upload files**, drag in everything from this folder
    (keep the `assets` and `digest` folders), and commit.
 4. **Settings → Pages** → Source: *Deploy from a branch* → Branch: `main` / `(root)` → Save.
-5. Wait a minute or two. The site is live at https://<your-username>.github.io
+5. Wait a minute or two. The site is live at https://ijazmk.com (custom domain via Cloudflare DNS)
 
 Optional custom domain (e.g. ijazmohammed.com, roughly USD 10–15 a year from any registrar):
 add it under Settings → Pages → Custom domain, then follow GitHub's DNS instructions and tick
