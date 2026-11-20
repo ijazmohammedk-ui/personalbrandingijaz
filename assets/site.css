@@ -555,3 +555,20 @@ a:hover { color: var(--amber); }
 .nova-band .kick { border-top-color: rgba(255,255,255,0.7); }
 .nova-band .kick .label { color: #eef2f7; }
 .nova-band .kick .label + .label { color: var(--text-3); }
+
+/* ---------- issue web editions (page-by-page) ---------- */
+.issue-brief { display: grid; gap: 28px; padding-block: 40px 8px; }
+@media (min-width: 900px) { .issue-brief { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; } }
+.issue-brief .brief .label { color: var(--amber); }
+.issue-brief .take { align-self: start; margin-top: 0; }
+.pages { display: flex; flex-direction: column; align-items: center; gap: 36px; padding-block: 40px 40px; }
+.pages-head { width: 100%; max-width: 760px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 10px; border-top: 1px solid var(--text); }
+.pg { margin: 0; width: 100%; max-width: 760px; display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 80px; }
+.pg img { display: block; width: 100%; height: auto; aspect-ratio: 1080 / 1351; border: 1px solid var(--line); box-shadow: 0 24px 50px -36px rgba(14,26,43,0.45); background: var(--navy-2); }
+.pg figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; font-size: 0.85rem; color: var(--text-3); }
+.pg-n { font-family: var(--f-mono); font-size: 0.78rem; }
+.pg details { flex: 1 1 260px; text-align: right; }
+.pg details[open] { text-align: left; flex-basis: 100%; }
+.pg summary { cursor: pointer; color: var(--teal); font-weight: 500; }
+.pg-text { margin-top: 10px; padding: 16px 18px; background: var(--navy-2); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; color: var(--text-2); font-size: 0.95rem; }
+.pg-text p { max-width: none; }
