@@ -585,3 +585,69 @@ a:hover { color: var(--amber); }
 .how { margin-top: clamp(48px, 7vw, 80px); }
 .how-title { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: 28px; }
 .cert-path { gap: 8px; }
+
+/* =====================================================================
+   Dashboard layer (Nov 2026): soft canvas, panel cards, icon tiles
+   ===================================================================== */
+:root { --canvas: #f2f4f7; --radius: 14px; --radius-sm: 10px; --shadow: 0 1px 2px rgba(14,26,43,0.04), 0 8px 24px -16px rgba(14,26,43,0.18); }
+body { background: var(--canvas); }
+.topbar { background: rgba(255,255,255,0.96); box-shadow: 0 1px 0 var(--line); border-bottom: 0; }
+.section { border-bottom: 0; padding-block: clamp(36px, 5vw, 60px); }
+.section-head { margin-bottom: 24px; }
+
+/* hero becomes a profile panel */
+.hero { border-bottom: 0; }
+.hero .wrap { padding-block: 24px 8px; }
+.hero .mast-rule { display: none; }
+.hero-grid { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); padding: clamp(24px, 4vw, 48px); margin-top: 8px; }
+.register { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; border: 0; margin-top: 6px; }
+.register div { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--canvas); }
+.register dt { font-size: 0.66rem; }
+.register dd { font-size: 0.88rem; line-height: 1.4; }
+@media (max-width: 520px) { .register { grid-template-columns: 1fr; } }
+.portrait .frame::after { display: none; }
+.portrait img { border-radius: 16px; box-shadow: 0 20px 44px -26px rgba(14,26,43,0.5); }
+.inside { border-top: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-block: 16px 0; }
+@media (min-width: 860px) { .inside { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.inside .label { display: none; }
+.inside a { border: 1px solid var(--line); border-left: 3px solid var(--amber-fill); border-radius: var(--radius-sm); background: #fff; padding: 14px 16px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+.inside a:hover { transform: translateY(-2px); color: var(--text); }
+
+/* what I do: icon tiles */
+.caps { background: none; border: 0; gap: 16px; }
+.cap { border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px 22px 18px; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.cap:hover { transform: translateY(-3px); border-color: #d9c79f; box-shadow: 0 18px 36px -22px rgba(14,26,43,0.35); }
+.cap-top { display: flex; align-items: center; gap: 12px; }
+.ico { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 10px; background: #f6efe1; color: var(--amber); }
+.ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.cap h3 { font-size: 1.3rem; }
+.cap .where { font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0; }
+.how { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(22px, 3vw, 36px); margin-top: 24px; }
+
+/* experience panels */
+.gantt-scroll, .map-box, .table-scroll { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.table-scroll { border-top: 1px solid var(--line); padding: 4px 22px 8px; }
+.places { background: #fff; border: 1px solid var(--line); border-top: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 6px 22px; }
+.places > div:last-child { border-bottom: 0; }
+.map-box { padding: 14px; }
+
+/* credentials, now, digest */
+.cred, .now article { border-radius: var(--radius); box-shadow: var(--shadow); }
+.edu { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 4px 22px; margin-top: 16px; }
+.edu div:last-child { border-bottom: 0; }
+.now { gap: 16px; }
+.cover { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border-color: var(--line); }
+.issue-list { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 0 20px; border-top: 1px solid var(--line); }
+.issue-list a:last-child { border-bottom: 0; }
+
+/* NOVA as a dark panel */
+.nova-band { background: transparent; color: var(--text); }
+.nova-band > .wrap { background: #0e1a2b radial-gradient(ellipse 80% 60% at 85% 0%, rgba(184,146,74,0.16), transparent 60%); border-radius: 22px; padding-block: clamp(32px, 5vw, 56px); box-shadow: 0 30px 60px -40px rgba(14,26,43,0.7); }
+@media (min-width: 760px) { .nova-band > .wrap { padding-inline: clamp(28px, 4vw, 56px); } }
+.nova { border-radius: var(--radius); overflow: hidden; }
+
+/* footer panel */
+.footer .wrap { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding-block: clamp(28px, 4vw, 48px); box-shadow: var(--shadow); }
+@media (min-width: 760px) { .footer .wrap { padding-inline: clamp(28px, 4vw, 48px); } }
+.footer { padding-block: 24px 40px; }
+.contact { border-top: 0; }
